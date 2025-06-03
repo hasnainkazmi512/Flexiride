@@ -1,4 +1,4 @@
-import Deal from "../../../models/Deal";
+import Deal from "../../../models/Deals";
 import connectDB from "../../../middleware/mongo";
 import jwt from "jsonwebtoken";
 
