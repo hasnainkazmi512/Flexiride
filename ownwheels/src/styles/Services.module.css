@@ -1,0 +1,104 @@
+  /* Services.css */
+  .servicesSection {
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 70px 30px;
+    color:white;
+    z-index: -1;
+    text-align: center;
+    margin-bottom: 100px;
+    /* background-color: #555;
+    background-image: url("../../public/images/bg.jpg");
+    background-attachment: fixed;
+    background:cover; */
+  }
+
+  .servicesSection h2 {
+    font-size: 36px;
+    
+    color: white;
+    font-family: 'Cinzel', serif;  /* Stylish font */
+    text-transform: uppercase; /* Make the heading uppercase for a bold look */
+    letter-spacing: 2px; /* Add some spacing between letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect to make the text pop */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transformation */
+  }
+
+  .servicesSection h2:hover {
+    color: wthite; /* Change text color to a bright orange on hover */
+    transform: scale(1.1); /* Slightly enlarge the heading on hover for a catchy effect */
+  }
+
+  /* Keep the rest of the code the same */
+  .servicesContainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    
+  }
+  
+
+  .serviceBox {
+   
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px; 
+    transition: transform 0.3s;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+  }
+
+  .serviceBox:hover {
+    transform: translateY(-10px);
+  }
+
+  .serviceBox h3 {
+    
+    font-size: 18px;
+    color: white;
+    font-family: 'Cinzel', serif;  /* Stylish font */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid white;  /* Stylish border around the title */
+    
+    text-decoration: none;
+      /* Slight background color */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .Link
+  {
+    border: none;
+    text-decoration: none;
+    
+    
+  }
+
+  .serviceBox h3:hover {
+    background-color: #ede5c1;  /* Change background on hover */
+    transform: scale(1.05);     /* Slight scale effect on hover */
+  }
+
+  .serviceBox p {
+    color: white;
+    font-weight: bold;  /* Make the description text bold */
+  }
+
+  .serviceImage {
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom */
+  }
+
+  .serviceImage:hover {
+    transform: scale(1.1);  /* Zoom in on hover */
+  }

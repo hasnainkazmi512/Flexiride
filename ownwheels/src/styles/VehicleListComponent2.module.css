@@ -1,0 +1,105 @@
+/* Main Container for Vehicle List and Filter */
+.vehicleList {
+    display: flex; /* Use flexbox to arrange child elements side by side */
+    padding: 1rem; /* Add some padding around the container */
+}
+
+/* Vehicle List Styles */
+.vehicleList {
+    display: flex;
+    justify-content: center; /* Center the vehicle list */
+    flex-wrap: wrap;
+    gap: 25px; /* Increased gap for better spacing */
+    flex: 1; /* Allow vehicle list to take the remaining space */
+    margin-left: 220px; /* Space to the right of the filter section */
+    padding-top: 1rem; /* Space from the top for the vehicle list */
+}
+
+.vehicleCard {
+    width: 350px; /* Set fixed width for consistency */
+    border: 1px solid #e0e0e0; /* Changed border color */
+    border-radius: 10px; /* Increased border radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Added shadow for depth */
+    padding: 7px; /* Increased padding */
+    background-color: #fff; /* Ensure consistent background color */
+    cursor: pointer;
+    transition: transform 0.3s; /* Match transition speed */
+    position: relative; /* Positioning for hover effects */
+    margin-top: 70px;
+}
+
+.vehicleCard:hover {
+    transform: translateY(-5px); /* Changed hover effect */
+}
+
+.carName {
+    font-size: 1.4rem; /* Match font size for vehicle names */
+    color: #333; /* Dark color for visibility */
+    margin-bottom: 8px; /* Space below the car name */
+}
+
+.requestButton {
+    background-color: red; /* Default color */
+    color: white;
+    padding: 10px 15px; /* Increased padding for button */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem; /* Adjust font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Consistent transition */
+    width: 100%; /* Full width for buttons */
+}
+
+.requestButton.requested {
+    background-color: green; /* Change color when requested */
+}
+
+.close {
+    cursor: pointer;
+    color: #aaa; /* Close button color */
+    float: right;
+    font-size: 28px; /* Consistent size for close icon */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Hover effect for close button */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex; /* Center modal content */
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 2rem; /* Match padding */
+    border-radius: 10px; /* Match border radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Added shadow */
+    max-width: 600px; /* Maintain width */
+    text-align: center; /* Center text */
+    animation: fadeIn 0.3s ease-out; /* Optional fade-in effect */
+}
+
+/* Fade-in animation for modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

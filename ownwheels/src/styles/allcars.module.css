@@ -1,0 +1,13 @@
+/* styles/Home.module.css */
+.app {
+  padding: 20px;
+}
+.title
+{
+  color: white;
+}
+.mainLayout {
+  display: flex;
+  justify-content: space-between;
+  
+}

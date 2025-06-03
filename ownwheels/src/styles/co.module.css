@@ -1,0 +1,270 @@
+/* General Styles */
+.completedOrdersPage {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  
+}
+
+.completedOrdersPage h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Search Bar */
+.searchBar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.searchBar input {
+  width: 300px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  padding-left: 40px; /* Space for the icon */
+  transition: box-shadow 0.3s;
+}
+
+.searchBar input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.searchIcon {
+  position: absolute;
+  left: calc(50% - 150px + 10px); /* Adjust for icon positioning */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+}
+
+
+
+
+/* Completed Orders Container */
+.completedOrdersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Completed Order Card */
+.completedOrderCard {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #496a8f, #42576d);
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.completedOrderCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Completed Badge */
+.completedBadge {
+  position: absolute;
+  top: -10px; /* Move above the image */
+  right: 10px;
+  background-color: #41cd45;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.completedIcon {
+  margin-right: 5px;
+}
+
+/* Car Image Container */
+.carImageContainer {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.carImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.carImageContainer:hover .carImage {
+  transform: scale(1.05);
+}
+
+.viewMore {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.carImageContainer:hover .viewMore {
+  opacity: 1;
+}
+
+/* Order Details */
+.orderDetails {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.orderDetails h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4em;
+  color: #ffffff;
+}
+
+.orderDetails p {
+  margin: 5px 0;
+  font-size: 0.95em;
+  color: #ffffff;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #496a8f, #42576d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background:  #5c8fc9;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.closeModal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 28px;
+  color: #333;
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.prevBtn,
+.nextBtn {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prevBtn {
+  left: 15px;
+}
+
+.nextBtn {
+  right: 15px;
+}
+
+.prevBtn:disabled,
+.nextBtn:disabled {
+  background-color: rgba(128, 128, 128, 0.5);
+  cursor: not-allowed;
+}
+
+.modalDetails {
+  text-align: left;
+}
+
+.modalDetails h3 {
+  margin: 0 0 10px 0;
+  color: #ffffff;
+}
+
+.modalDetails p {
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .completedOrderCard {
+      width: 90%;
+  }
+
+  .searchBar input {
+      width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .completedOrderCard {
+      width: 100%;
+  }
+
+  .searchBar input {
+      width: 90%;
+  }
+}

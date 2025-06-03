@@ -1,0 +1,115 @@
+/* RentAllOffers - Main Container */
+.rentAllOffers {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(145deg, #496a8f, #42576d);
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .offersGrid {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .offerCard {
+    position: relative;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    color: black;
+  }
+  
+  .offerCard:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .carImage {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+  
+  .clickableName {
+    color: #0078ff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .driverTag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    color: black;
+  }
+  
+  .close {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .requestButton {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .requestButton:hover {
+    background-color: darkblue;
+  }
+  
+  .requested {
+    background-color: green;
+    cursor: not-allowed;
+  }
+  

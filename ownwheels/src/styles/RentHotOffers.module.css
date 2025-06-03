@@ -1,0 +1,112 @@
+/* RentHotOffers - Main Container */
+.rentHotOffers {
+    margin-bottom: 40px;
+    padding: 20px;
+   
+    border-radius: 0px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(83, 178, 228); /* Red color */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* For emphasis */
+  }
+  
+  /* RentHotOffers - Grid for Vehicles */
+  .offersGrid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* RentHotOffers - Vehicle Card */
+  .offerCard {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .offerCard:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* RentHotOffers - Vehicle Image */
+  .carImage {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* RentHotOffers - Hot Tag */
+  .hotTag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* RentHotOffers - Modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+  }
+  
+  .close {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  /* RentHotOffers - Request Button */
+  .requestButton {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .requestButton:hover {
+    background-color: darkblue;
+  }
+  
+  .requestButton.requested {
+    background-color: green;
+    cursor: not-allowed;
+  }
+  

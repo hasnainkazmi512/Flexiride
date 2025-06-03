@@ -1,0 +1,232 @@
+/* Dashboard.css */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  /* Full viewport height */
+}
+
+/* Navbar and arrow button */
+.navbar {
+  background-color: #422045;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  height: 120px;
+   /* Black border to highlight */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logoImg {
+  width: 60px;
+  margin-right: 10px; /* Ensure there’s space */
+}
+
+/* Position arrow button next to the logo */
+.arrowButton {
+  background: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 15px; /* Space between logo and arrow */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.arrowButton:hover {
+  color:rgb(0, 140, 255) /* Change color on hover */
+}
+
+/* Navigation Links */
+.navLinks {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Center align vertically */
+  gap: 30px; /* Add some space between links */
+  color: rgb(255, 255, 255);
+}
+
+.navLinks li {
+  position: relative; /* Needed for absolute positioning of dropdown */
+}
+
+.navLinks span {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* Profile dropdown */
+.profileContainer {
+  position: relative;
+}
+
+.profileSection {
+  cursor: pointer;
+}
+
+.profileIcon {
+  width: 20px; /* Adjust the profile icon size */
+  height: 30px; /* Set height */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px; /* Space between text and icon */
+}
+
+/* Dropdown menu styling */
+.dropdownMenu {
+  position: absolute;
+  top: 85px; /* Adjusted position to be below the profile icon */
+  right: 0;
+  background: linear-gradient(145deg, #496a8f, #42576d); /* Darker background for contrast */
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  width: 200px;
+  z-index: 10; /* Ensures dropdown appears above other elements */
+}
+
+.dropdownHeader {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.userName {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff; /* White text for visibility */
+}
+
+.userEmail {
+  font-size: 13px;
+  color: #fff; /* White text for visibility */
+}
+
+/* Dropdown options */
+.dropdownOptions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+}
+
+.dropdownOptions li {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #fff; /* White text color */
+}
+
+.dropdownOptions li:hover {
+  background-color: #6c6c6c; /* Darker gray background on hover for contrast */
+}
+
+/* Sidebar and dashboard content */
+.dashboardContent {
+  display: flex;
+  flex-direction: row; /* Place sidebar and content side by side */
+  padding-left: 0; /* Remove left padding for content */
+  margin-top: 0;
+   /* Remove top margin */
+}
+
+.sidebar {
+  position: relative;
+  margin-top: 10px; /* Make sidebar relative */
+  top: 0; /* Reset top position */
+  left: 0; /* Align to the left */
+  width: 200px; /* Fixed width for sidebar */
+  height: 100vh; /* Full height minus navbar height */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: ease-in-out 1s ease;
+  
+  padding: 20px; /* Smooth transition */
+  z-index: 5; /* Ensure it appears above the background */
+}
+
+/* Sidebar heading */
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+  color: #ffffff; /* Make sidebar text white */
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 0; /* Add padding for clickable area */
+  transition: background-color 0.3s;
+  padding: 10px;
+  border-radius: 20px; /* Smooth transition for hover effect */
+}
+
+.sidebar ul li:hover {
+  background-color: #969696a4; /* Light gray background on hover */
+}
+
+.serviceContent {
+  flex: 1; /* Take the remaining width */
+  padding: 20px;
+  color: white;
+}
+
+.menuButton {
+  background-color: #808080; /* Match the navbar background */
+  color: black; /* Change text color to black */
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin: 15px 0; /* Add some space above and below */
+  width: 200px; /* Set a fixed width for the button */
+  align-self: flex-start; /* Align button to the start of the flex container */
+}
+
+.menuButton:hover {
+  background-color: #696969; /* Slightly darker on hover */
+}
+/* Add styles for profile page */
+.profileContainer {
+  text-align: center;
+  padding: 20px;
+}
+
+.profileIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profileDetails {
+  margin-top: 10px;
+}
+
+.profileDetails p {
+  font-size: 18px;
+}

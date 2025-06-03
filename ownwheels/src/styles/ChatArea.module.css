@@ -1,0 +1,88 @@
+.chatContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .backButton {
+    background-color: rgba(80, 80, 80, 0.95);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  
+.chatMessages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  max-width: 60%;
+  word-wrap: break-word;
+}
+
+.userMessage {
+  background-color: rgba(80, 80, 80, 0.95);
+  color: white;
+  align-self: flex-end; /* Ensure user's message aligns to the right */
+  margin-left: auto;    /* Add margin to push message to the right */
+  text-align: right;
+}
+
+.systemMessage {
+  background-color: #f1f1f1;
+  color: black;
+  align-self: flex-start; /* Ensure system message aligns to the left */
+  margin-right: auto;     /* Add margin to push message to the left */
+  text-align: left;
+}
+  
+  .inputContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .messageInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .sendButton {
+    background-color: rgba(80, 80, 80, 0.95);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+  /* =----- */

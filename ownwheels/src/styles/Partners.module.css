@@ -1,0 +1,65 @@
+/* Partners Section Styling */
+.partnersSection {
+  background-color: rgb(48,68,87);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh; /* Full viewport height */
+ margin-bottom: 100px;
+ color: white;
+ border: 1px solid white;
+ border-radius: 20px;
+ 
+
+}
+
+.partnersImage {
+  width: 60%; /* Adjust width to fit image and text side by side */
+  height: 90%; /* Full height from top to bottom */
+  object-fit: cover; /* Ensures image covers the area without stretching */
+  border: 5px solid rgb(188, 188, 188); /* Dark grey border */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+  border-radius: 15px;
+}
+
+.partnersImage:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.partnersContent {
+
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding-left: 40px; /* Space between image and text */
+  width: 60%; /* Adjust width to fit title and description */
+
+  scrollbar-color: white transparent;
+  
+}
+
+.partnersSection h2 {
+  margin-top: 40px;
+  
+   /* Reduced margin for better alignment with description */
+  font-family: 'Cinzel', serif; /* Stylish font */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.partnersContent p {
+  font-size: 18px;
+  font-weight: bold; /* Bold description */
+  
+  max-width: 100%;
+  line-height: 1.6;
+  margin-top: 0px; /* Adjusted margin to give spacing between title and description */
+}

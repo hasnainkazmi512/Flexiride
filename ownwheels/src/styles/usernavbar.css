@@ -1,0 +1,93 @@
+/* UserNav CSS */
+.navbar {
+  background-color: #808080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  height: 120px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logoImg {
+  width: 70px;
+  margin-right: 10px;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profileContainer {
+  position: relative;
+}
+
+.profileSection {
+  cursor: pointer;
+}
+
+.profileIcon {
+  width: 20px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 85px;
+  right: 0;
+  background-color: rgb(80, 80, 80);
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 10;
+}
+
+.dropdownHeader {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.userName {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.userEmail {
+  font-size: 13px;
+  color: #fff;
+}
+
+.dropdownOptions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdownOptions li {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #fff;
+}
+
+.dropdownOptions li:hover {
+  background-color: #444;
+}

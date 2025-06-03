@@ -1,0 +1,139 @@
+/* Main Container */
+.hotOffers {
+    margin-bottom: 40px;
+    padding: 20px;
+    
+    border-radius: 0px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(111, 160, 215);
+    margin-bottom: 20px;
+    text-align: center; /* Ensures the text itself is centered */
+    text-transform: uppercase;
+  }
+  
+  /* Grid for Vehicles */
+  .offersGrid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Vehicle Card */
+  .offerCard {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .offerCard:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Vehicle Image */
+  .image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Hot Tag */
+  .hotTag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Modal */
+  .modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .modalContent {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+    position: relative;
+  }
+  
+  /* Close Button */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 28px;
+  }
+  
+  .close:hover {
+    color: #000;
+  }
+  
+  /* Request Button */
+  .requestButton {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .requested {
+    background-color: green;
+  }
+  
+  .requestButton:hover {
+    background-color: green;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

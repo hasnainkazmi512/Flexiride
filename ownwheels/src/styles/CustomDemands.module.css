@@ -1,0 +1,56 @@
+/* Main Container */
+.customDemands {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #ffefba, #8704bb);
+  border-radius: 10px;
+  align-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* Add flexbox for centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title Styling */
+.customDemands h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(0, 17, 255);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center; /* Ensures the text itself is centered */
+}
+
+/* Textarea Styling */
+.textarea {
+  width: 50%;
+  height: 120px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+/* Focus state for Textarea */
+.textarea:focus {
+  border-color: #ff9800;
+  outline: none;
+}
+
+/* Button Styling */
+.button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #0044cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background: #0033aa;
+}

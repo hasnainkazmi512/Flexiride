@@ -1,0 +1,70 @@
+/* Hero.css */
+.herosection {
+    position: relative;
+    height: 90vh; /* Full viewport height */
+    display: flex;
+    justify-content: space-between; /* Align content horizontally, video on the left, content on the right */
+    align-items: center; /* Center content vertically */
+    background-color: transparent; /* Set background to black */
+    text-align: left; /* Align text to the left */
+    padding: 0; /* Ensure no extra padding around the section */
+  }
+  
+  .heromedia {
+    position: relative;
+    width: 40%; /* Adjust width of the video */
+    height: 90%; /* Full height from top to bottom */
+    z-index: 0; /* Makes sure the video stays behind the content */
+  }
+  
+  .herovideo {
+    position: absolute;
+    top: 0;
+    left: 20;
+    width: 200%; /* Full width of the video container */
+    height: 100%; /* Full height of the video container */
+    object-fit: cover; /* Ensure the video covers the area proportionally */
+    border-radius: 15px; /* Rounded edges of the video */
+    z-index: 0; /* Keep it behind the content */
+   
+    
+  }
+  
+  .herocontent {
+    position: relative;
+    z-index: 1; /* Ensure content is above the video */
+    padding: 20px;
+    max-width: 500px; /* Adjust the content width */
+    color: white; /* White text to contrast with the video background */
+    text-align: left;
+    width: 50%; /* Content takes up 50% of the section width */
+    padding-left: 30px; /* Adds padding on the left for spacing */
+  }
+  
+  .herocontent h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .herocontent p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .rentbtn {
+    padding: 15px 30px;
+    background-color: #fffef9;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .rentbtn:hover {
+    background-color: hsl(0, 3%, 83%);
+    transform: scale(1.05);
+  }
+ 

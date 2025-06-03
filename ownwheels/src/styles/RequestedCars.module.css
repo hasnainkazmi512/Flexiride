@@ -1,0 +1,54 @@
+.container {
+    padding: 2rem;
+  }
+  
+  .requestCard {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .requestHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .bidsSection {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .bidCard {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .bidHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }

@@ -1,0 +1,110 @@
+.container {
+  padding: 2rem;
+}
+
+.loading, .error, .successMessage {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.loading {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.successMessage {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.requestsList {
+  margin-top: 2rem;
+}
+
+.requestCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.requestHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.statusOpen {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.statusAccepted {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.statusClosed {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.bidsContainer {
+  margin-top: 1rem;
+}
+
+.bidCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+.acceptedBid {
+  background-color: #e8f5e9;
+  border-color: #4caf50;
+}
+
+.rejectedBid {
+  background-color: #ffebee;
+  border-color: #f44336;
+  opacity: 0.7;
+}
+
+.bidHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.acceptButton {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.acceptButton:hover:not(:disabled) {
+  background-color: #388e3c;
+}
+
+.acceptButton:disabled {
+  background-color: #81c784;
+  cursor: not-allowed;
+}

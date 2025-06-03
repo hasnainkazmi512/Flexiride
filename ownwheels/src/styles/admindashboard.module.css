@@ -1,0 +1,259 @@
+/* Container Layout */
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .brandName {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .navLinks {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navLinks li {
+    margin: 15px 0;
+    cursor: pointer;
+  }
+  
+  .navLinks li.active {
+    font-weight: bold;
+  }
+  
+  /* Main Content */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+  /* Top Navigation */
+  .topNav {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    align-items: center;
+    padding: 15px 20px;
+   margin-left: 10px; 
+    
+  }
+  
+  .searchBar {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .profileSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profileIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  
+  /* Dashboard Content */
+  .dashboardContent {
+    padding: 20px;
+  }
+  
+  .metricsSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .metricCard {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .count {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .engagementSection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .engagementCard {
+    
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .email { background-color: #ffd7d7; }
+  .facebook { background-color: #cdeffd; }
+  .linkedin { background-color: #d5e8ff; }
+  .gmail { background-color: #ffd7fd; }
+  
+  /* Table */
+  .bookingsTable {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bookingsTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .bookingsTable th,
+  .bookingsTable td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .statusDone {
+    color: green;
+  }
+  
+  .statusProgress {
+    color: orange;
+  }
+  /* Sidebar heading */
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 10px;
+    color: #fff; /* Make sidebar text white */
+    cursor: pointer;
+    padding: 10px 0; /* Add padding for clickable area */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #080808; /* Light gray background on hover */
+  }
+  
+  .serviceContent {
+    flex: 1; /* Take the remaining width */
+    padding: 20px;
+  }
+  .searchBarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust the space above */
+  }
+  
+  .searchBarInput {
+    width: 300px; /* You can adjust the width */
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .searchBarInput::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  .searchBarInput:focus {
+    border-color: #4caf50; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  }
+  
+  .searchBarInput:hover {
+    border-color: #888; /* Light gray border on hover */
+  }
+  
+  .searchBarInput:focus::placeholder {
+    color: transparent; /* Hides placeholder when input is focused */
+  }
+  
+  .searchBarInput:focus + .searchBarIcon {
+    opacity: 0.7;
+  }
+  
+  .searchBarIcon {
+    position: absolute;
+    right: 20px;
+    color: #aaa;
+    font-size: 18px;
+    pointer-events: none;
+  }
+  .profileIconWrapper {
+    position: relative;
+  }
+  
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fffffc9c;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  .dropdownMenu button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  .dropdownMenu button:hover {
+    background-color: #d1cdd1;
+  }
+  

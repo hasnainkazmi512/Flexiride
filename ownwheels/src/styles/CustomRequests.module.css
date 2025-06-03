@@ -1,0 +1,93 @@
+.container {
+    padding: 2rem;
+  }
+  
+  .requestsList {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .requestCard {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .requestHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+  
+  .bidButton {
+    padding: 0.5rem 1rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .bidButton:hover {
+    background-color: #005bb5;
+  }
+  
+  .bidForm {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background: #f9f9f9;
+  }
+  
+  .formGroup {
+    margin-bottom: 1rem;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .formGroup textarea {
+    min-height: 80px;
+  }
+  
+  .formActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .submitButton {
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cancelButton {
+    padding: 0.5rem 1rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

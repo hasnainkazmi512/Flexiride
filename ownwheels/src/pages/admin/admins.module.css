@@ -1,0 +1,155 @@
+.container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.adminGrid {
+    display: flex; /* Change to flex for horizontal alignment */
+    justify-content: center; /* Center the cards horizontally */
+    align-items: flex-start; /* Align cards at the top */
+    gap: 50px; /* Add spacing between the cards */
+    margin-top: 20px;
+}
+
+.adminCard {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 280px; /* Fixed width for consistency */
+}
+
+.adminPicture {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.adminDetails {
+    text-align: center;
+}
+
+.adminName {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.actionButtons {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.editButton,
+.deleteButton,
+.changePasswordButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.editButton {
+    background-color: #3498db;
+    color: white;
+}
+
+.deleteButton {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.changePasswordButton {
+    background-color: #f39c12;
+    color: white;
+}
+
+.addButton {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalCard {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+}
+
+/* Local class for button styles */
+.submitButton {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancelButton {
+    background-color: #ccc;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.deleteConfirmButton {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modalCard input,
+.modalCard textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modalCard button {
+    margin-top: 10px;
+    width: 100%;
+}

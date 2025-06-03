@@ -1,0 +1,170 @@
+/* Container for the entire AllCars page */
+.container {
+  padding: 20px;
+  max-width:100%;
+  height: 500px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.cardGrid {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  scrollbar-color: gray transparent;
+  
+  justify-content: space-evenly;
+  column-gap: 5px;
+  row-gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card {
+  
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #496a8f, #42576d);
+  max-width: 220px;
+  
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carImage {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Button container styling */
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Button styling */
+.editBtn, .deleteBtn, .viewDetailsBtn {
+  padding: 8px 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.editBtn {
+  background-color: #ffcc00;
+  color: white;
+}
+
+.deleteBtn {
+  background-color: #ff4444;
+  color: white;
+}
+
+.viewDetailsBtn {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.imageCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.arrowBtn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.modalImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Edit form styling */
+.inputField {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.saveBtn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Close button styles */
+.closeBtn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.yesbtn {
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}

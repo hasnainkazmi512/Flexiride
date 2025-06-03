@@ -1,0 +1,299 @@
+/* Requests container styling */
+.requestsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.requestCard {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #496a8f, #42576d);
+    width: 270px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+.requestCard:hover {
+    transform: translateY(-5px);
+}
+
+.carImageContainer {
+    position: relative;
+}
+
+.carImage {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.viewMore {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Adjust request details positioning */
+.requestDetails {
+    margin: 10px 0;
+}
+
+.requestDetails h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.requestDetails p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: white;
+}
+
+.requestActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.acceptBtn,
+.denyBtn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+}
+
+.acceptBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.acceptBtn:hover {
+    background-color: #45a049;
+}
+
+.denyBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+.denyBtn:hover {
+    background-color: #d32f2f;
+}
+
+/* Status labels */
+.statusLabel {
+    background-color: #f0ad4e; /* Yellow background for pending */
+    color: white; /* White text for contrast */
+    padding: 5px 15px; /* Increase padding for better visibility */
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1em;
+    position: absolute;
+    top: 5px; /* Slightly move it above the image */
+    left: 10px;
+    z-index: 1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+}
+
+/* Accepted status (green) */
+.statusLabel.accepted {
+    background-color: #41cd45;
+}
+
+/* Denied status (red) */
+.statusLabel.denied {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Modal styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    text-align: center;
+}
+
+.closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Position "Pending" label in modal at top-left corner above the image */
+.statusLabelModal {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f0ad4e; /* Default to yellow for pending */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1em;
+    z-index: 2;
+}
+
+/* Change modal status label color based on request status */
+.statusLabelModal.accepted {
+    background-color: #41cd45; /* Green for accepted */
+}
+
+/* Change modal status label color based on request status */
+.statusLabelModal.denied {
+    background-color: #f44336; /* Red for denied */
+}
+
+.modalImage {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* New styles for image navigation */
+.imageContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prevBtn,
+.nextBtn {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prevBtn {
+    left: 10px;
+}
+
+.nextBtn {
+    right: 10px;
+}
+
+.prevBtn:disabled,
+.nextBtn:disabled {
+    background-color: rgba(128, 128, 128, 0.5);
+    cursor: not-allowed;
+}
+
+.modalDetails h3 {
+    margin: 10px 0;
+}
+
+.modalDetails p {
+    margin: 5px 0;
+}
+
+.modalActions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+/* Chat button */
+.chatBtn {
+    background-color: #2196F3;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+}
+
+.chatBtn:hover {
+    background-color: #1976D2;
+}
+/* Chat button */
+.chatBtn {
+    background-color: #2196F3;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+  }
+  
+  .chatBtn:hover {
+    background-color: #1976D2;
+  }
+  /* Add this to your existing CSS */
+
+.chatContainer {
+    position: fixed;
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    width: 500px; /* Adjusted width to fit better */
+    max-width: 90%; /* Ensure it doesn't overflow */
+    background-color: rgba(80, 80, 80, 0.95); /* Background for better visibility */
+    border: 2px solid gray; /* Added gray border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it's above other content */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Set to auto to allow for dynamic content height */
+    max-height: 80vh; /* Limit the height to ensure it fits on the screen */
+    overflow: auto; /* Allow scrolling if content exceeds max-height */
+}
