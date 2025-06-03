@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from '../styles/CusRequests.module.css';
+import styles from '../styles/CusRequests.css';
 
 const CustomRequests = () => {
   const [requests, setRequests] = useState([]);
