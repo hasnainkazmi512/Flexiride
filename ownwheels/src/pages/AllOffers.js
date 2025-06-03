@@ -1,9 +1,10 @@
-import React, { useState,useEffect } from "react";
-import styles from "../styles/AllOffers.module.css"
+import React, { useState } from "react";
+import styles from "../styles/AllOffers.module.css";
 
-const AllOffers = ({ filteredOffers, setSearchTerm }) => {
+const AllOffers = ({ filteredOffers = [], setSearchTerm }) => {
   const [selectedOffer, setSelectedOffer] = useState(null);
   const [isRequested, setIsRequested] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleCardClick = (offer) => {
     setSelectedOffer(offer);
@@ -14,39 +15,36 @@ const AllOffers = ({ filteredOffers, setSearchTerm }) => {
     setSelectedOffer(null);
   };
 
-  const handleRequestClick = async() => {
+  const handleRequestClick = async () => {
     try {
-      // Fetch user data from the API
-      const response = await fetch('http://localhost:3000/api/MakeOrderFront', {
+      const response = await fetch('/api/MakeOrderFront', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'auth-token': `${localStorage.getItem('auth-token')}`, // Include JWT token from localStorage
+          'auth-token': localStorage.getItem('auth-token')
         },
         body: JSON.stringify({
           productID: selectedOffer._id,
-          type:2
+          type: 2
         })
       });
-  
+
       const data = await response.json();
-        console.log("success",data)
       if (response.ok) {
-          setIsRequested(data)
+        setIsRequested(true);
       } else {
-        setError('Failed to fetch user data');
+        setError('Failed to submit request');
       }
     } catch (error) {
-      setError('Error fetching data');
-    } finally {
+      setError('Error submitting request');
     }
-    setIsRequested(true);
   };
 
   return (
     <div className={styles.allOffers}>
       <h2>All Trips</h2>
-      {filteredOffers.length > 0 ? (
+
+      {Array.isArray(filteredOffers) && filteredOffers.length > 0 ? (
         <div className={styles.offersGrid}>
           {filteredOffers.map((offer) => (
             <div
@@ -55,8 +53,8 @@ const AllOffers = ({ filteredOffers, setSearchTerm }) => {
               onClick={() => handleCardClick(offer)}
             >
               <img
-                src={offer.images[0].img1}
-                alt="not found"
+                src={offer.images?.[0]?.img1 || "/images/default.jpg"}
+                alt={offer.title || "Image"}
                 className={styles.carImage}
               />
               <h3
@@ -88,12 +86,12 @@ const AllOffers = ({ filteredOffers, setSearchTerm }) => {
               &times;
             </span>
             <img
-              src={selectedOffer.images[0].img1}
+              src={selectedOffer.images?.[0]?.img1 || "/images/default.jpg"}
               alt={selectedOffer.title}
               className={styles.carImage}
             />
             <h2>{selectedOffer.title}</h2>
-            <p>Price: {selectedOffer.price} </p>
+            <p>Price: {selectedOffer.price}</p>
             <p>Description: {selectedOffer.desc}</p>
             <p>Special Instruction: {selectedOffer.special_instruction}</p>
             <p>{selectedOffer.details || "No details available"}</p>
@@ -102,9 +100,11 @@ const AllOffers = ({ filteredOffers, setSearchTerm }) => {
                 isRequested ? styles.requested : ""
               }`}
               onClick={handleRequestClick}
+              disabled={isRequested}
             >
               {isRequested ? "Requested" : "Request"}
             </button>
+            {error && <p style={{ color: "red" }}>{error}</p>}
           </div>
         </div>
       )}
