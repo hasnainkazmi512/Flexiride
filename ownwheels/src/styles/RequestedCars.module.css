@@ -34,7 +34,7 @@
     margin-bottom: 0.5rem;
   }
   
-  button {
+  .myButton {
     padding: 0.5rem 1rem;
     background-color: #0070f3;
     color: white;
@@ -44,11 +44,11 @@
     margin-top: 0.5rem;
   }
   
-  button:hover {
+  .myButton:hover {
     background-color: #005bb5;
   }
   
-  button:disabled {
+  .myButton:disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }

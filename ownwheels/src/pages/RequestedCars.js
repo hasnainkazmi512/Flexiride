@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/RequestedCars.module.css';
 
@@ -83,11 +82,13 @@ const RequestedCars = () => {
                     <p>Car Details: {bid.carDetails}</p>
                     {request.status === 'open' && (
                       <button 
-                        onClick={() => handleAcceptBid(request._id, bid._id)}
-                        disabled={bid.status === 'rejected'}
-                      >
-                        {bid.status === 'accepted' ? 'Accepted' : 'Accept Bid'}
-                      </button>
+  className={styles.myButton}
+  onClick={() => handleAcceptBid(request._id, bid._id)}
+  disabled={bid.status === 'rejected'}
+>
+  {bid.status === 'accepted' ? 'Accepted' : 'Accept Bid'}
+</button>
+
                     )}
                   </div>
                 ))
